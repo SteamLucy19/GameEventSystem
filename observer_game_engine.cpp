@@ -22,7 +22,7 @@ public:
 // Mage class: Concrete observer
 class Mage : public Player {
 public:
-    void update(const std::string& event) override {
+    void update(const string& event) override {
         cout << "[Mage] Received event: " << event << endl;
     }
 };
@@ -44,8 +44,8 @@ public:
     }
 
     // Notify all players of an event
-    void notify(const std::string& event) {
-        cout << "[GameEngine] Event Triggered: " << event << std::endl;
+    void notify(const string& event) {
+        cout << "[GameEngine] Event Triggered: " << event << endl;
         for (Player* player : players) {
             player->update(event); // Notify each player
         }
